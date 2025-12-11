@@ -1,0 +1,81 @@
+spree-tests-project/
+├── src/main/
+│   ├── java/com/spree/
+│   │   ├── pages/                    (Page Objects)
+│   │   │   ├── BasePage.java
+│   │   │   ├── HomePage.java
+│   │   │   ├── ProductPage.java
+│   │   │   ├── CategoryPage.java
+│   │   │   ├── CartPage.java
+│   │   │   ├── CheckoutPage.java
+│   │   │   ├── LoginPage.java
+│   │   │   ├── RegistrationPage.java
+│   │   │   ├── AccountPage.java
+│   │   │   └── SearchPage.java
+│   │   │
+│   │   ├── components/              (Reusable Components)
+│   │   │   ├── HeaderComponent.java
+│   │   │   ├── FooterComponent.java
+│   │   │   └── ProductCardComponent.java
+│   │   │
+│   │   └── utils/                   (Utilities)
+│   │       ├── ConfigReader.java
+│   │       ├── TestDataGenerator.java
+│   │       └── HelperMethods.java
+│   │
+│   └── resources/                   (Configuration)
+│       ├── config.properties
+│       └── test-data.json
+│
+├── src/test/
+│   ├── java/com/spree/
+│   │   ├── base/                    (Base Test Class)
+│   │   │   └── BaseTest.java
+│   │   │
+│   │   ├── Tests/                   (All Test Classes)
+│   │   │   ├── smoke/               (Smoke Tests)
+│   │   │   │   ├── SmokeTests.java
+│   │   │   │   └── CriticalPathTests.java
+│   │   │   │
+│   │   │   ├── regression/          (Regression Tests - Main)
+│   │   │   │   ├── cart/
+│   │   │   │   │   ├── CartBasicOperationsTests.java
+│   │   │   │   │   ├── CartPriceTests.java
+│   │   │   │   │   └── CartValidationTests.java
+│   │   │   │   │
+│   │   │   │   ├── checkout/
+│   │   │   │   │   ├── CheckoutFlowTests.java
+│   │   │   │   │   ├── CheckoutPaymentTests.java
+│   │   │   │   │   └── CheckoutValidationTests.java
+│   │   │   │   │
+│   │   │   │   ├── user/
+│   │   │   │   │   ├── AuthenticationTests.java
+│   │   │   │   │   ├── ProfileTests.java
+│   │   │   │   │   └── OrderHistoryTests.java
+│   │   │   │   │
+│   │   │   │   └── product/
+│   │   │   │       ├── ProductBrowsingTests.java
+│   │   │   │       ├── ProductDetailsTests.java
+│   │   │   │       └── ProductSearchTests.java
+│   │   │   │
+│   │   │   └── integration/         (Integration Tests)
+│   │   │       ├── EndToEndTests.java
+│   │   │       └── WorkflowTests.java
+│   │   │
+│   │   └── data/                    (Test Data)
+│   │       └── TestData.java
+│   │
+│   └── resources/                   (Test Configuration)
+│       ├── testng-smoke.xml
+│       ├── testng-regression.xml
+│       ├── testng-integration.xml
+│       └── testng-full.xml
+│
+├── test-reports/                    (Test Reports)
+│   ├── html-reports/
+│   ├── xml-reports/
+│   └── screenshots/
+│
+├── logs/                           (Execution Logs)
+├── pom.xml                         (Maven Configuration)
+└── README.md                       (Project Documentation)
